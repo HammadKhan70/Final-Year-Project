@@ -19,10 +19,9 @@ from django.urls import path, include
 admin.site.site_header = "RTVC Admin"
 admin.site.site_title = "RTVC Admin Portal"
 admin.site.index_title = "Welcome to RTVC Portal"
-#this is a project urls file
+# this is a project urls file
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Commentry.urls'))
+    path('', include('Commentry.urls'))
 ]
- 
