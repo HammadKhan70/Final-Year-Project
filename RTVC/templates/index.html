@@ -195,102 +195,30 @@
 				</div>
 				<div class="row ftco-animate">
 					<div class="col-md-12 carousel-game-schedule owl-carousel">
+                            {% for sc in schedule  %}
 						<div class="item">
+						
 							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
+							
+								<div class="divider"><p><span>{{sc.date_place}}</span></p></div>
 								<div class="d-flex sched-wrap">
 									<span class="vs">vs</span>
 									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team1.png);"></div>
-										<h3><span>Pakistan</span></h3>
+										<div class="img" style="background-image: url({{sc.team1_img.url}});"></div>
+										<h3><span>{{sc.team1}}</span></h3>
 									</div>
 									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team2.png);"></div>
-										<h3><span>Australia</span></h3>
+										<div class="img" style="background-image: url({{sc.team2_img.url}});"></div>
+										<h3><span>{{sc.team2}}</span></h3>
 									</div>
+									
 								</div>
+								
 							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team3.png);"></div>
-										<h3><span>New Zealand</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team4.png);"></div>
-										<h3><span>England</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team5.jpg);"></div>
-										<h3><span>West Indies</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team6.png);"></div>
-										<h3><span>Sri Lanka</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team7.png);"></div>
-										<h3><span>India</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team8.png);"></div>
-										<h3><span>South Africa</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team3.png);"></div>
-										<h3><span>New Zealand</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team5.jpg);"></div>
-										<h3><span>West Indies</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
-	          <div class="item">
-							<div class="game-sched text-vs text-center">
-								<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-								<div class="d-flex sched-wrap">
-									<span class="vs">vs</span>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team1.png);"></div>
-										<h3><span>Pakistan</span></h3>
-									</div>
-									<div class="team-logo text-center">
-										<div class="img" style="background-image: url(static/images/Team4.png);"></div>
-										<h3><span>England</span></h3>
-									</div>
-								</div>
-							</div>
-	          </div>
+							
+	                   </div>
+	                    {% endfor %}
+	        
 					</div>
 				</div>
 			</div>
@@ -301,19 +229,21 @@
     	<div class="overlay"></div>
     	<div class="container">
     		<div class="row d-flex">
+			{% for disp in ad  %}
     			<div class="col-md-5 py-md-5">
     				<div class="row justify-content-start py-md-5">
 		          <div class="col-md-12 heading-section heading-section-white ftco-animate">
-		            <h2 class="mb-4">Injured Muhammad Amir ruled out of West Indies T20Is;Hassan Ali named replacement</h2>
-		            <p>The unfortunate injury to the senior Pakistani Bowler opens up another opportunity for the 25-year-old Karachi King and ISLAMABAD United batsman. Hassan Ali has been in and out of Pakistan's shortest format squad, but hasn't managed to add to his solitary cap, against Zimbabwe, in July 2015.</p>
+		            <h2 class="mb-4">{{disp.title}}</h2>
+		            <p>{{disp.description}}</p>
 		            <p><a href="News1.html" class="btn btn-secondary py-3 px-4">Details</a></p>
 		          </div>
 		        </div>
 	        </div>
 	        <div class="col-md-1"></div>
 	        <div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(static/images/abouttt.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url({{disp.img_ad.url}});"></div>
     			</div>
+				{% endfor %}
         </div>
     	</div>
     </section>
@@ -331,65 +261,28 @@
         		<div class="img img-game d-flex align-selg-stretch" style="background-image: url(static/images/about1.jpg);"></div>
         	</div>
         	<div class="col-md-5">
+
+			    {% for up in upcome  %}
         		<div class="game-sched text-vs text-center mb-1 ftco-animate">
-							<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
+							<div class="divider"><p><June>{{up.place_date}}</span></p></div>
 							<div class="d-flex sched-wrap">
 								<span class="vs">vs</span>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team1.png);"></div>
-									<h3><span>Pakistan</span></h3>
+									<div class="img" style="background-image: url({{up.image1.url}});"></div>
+									<h3><span>{{up.team1_name}}</span></h3>
 								</div>
 								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team2.png);"></div>
-									<h3><span>Australia</span></h3>
+									<div class="img" style="background-image: url({{up.image2.url}});"></div>
+									<h3><span>{{up.team2_name}}</span></h3>
 								</div>
 							</div>
 						</div>
+                   {% endfor %}
+						
 
-						<div class="game-sched text-vs text-center mb-1 ftco-animate">
-							<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-							<div class="d-flex sched-wrap">
-								<span class="vs">vs</span>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team3.png);"></div>
-									<h3><span>New Zealand</span></h3>
-								</div>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team4.png);"></div>
-									<h3><span>England</span></h3>
-								</div>
-							</div>
-						</div>
+						
 
-						<div class="game-sched text-vs text-center mb-1 ftco-animate">
-							<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-							<div class="d-flex sched-wrap">
-								<span class="vs">vs</span>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team5.jpg);"></div>
-									<h3><span>West Indies</span></h3>
-								</div>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team6.png);"></div>
-									<h3><span>Sri Lanka</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="game-sched text-vs text-center mb-1 ftco-animate">
-							<div class="divider"><p><span>Home @ Arena</span> - <span>June 7, 2018</span></p></div>
-							<div class="d-flex sched-wrap">
-								<span class="vs">vs</span>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team7.png);"></div>
-									<h3><span>India</span></h3>
-								</div>
-								<div class="team-logo text-center">
-									<div class="img" style="background-image: url(static/images/Team8.png);"></div>
-									<h3><span>South Africa</span></h3>
-								</div>
-							</div>
-						</div>
+					
         	</div>
         </div>
     	</div>
@@ -405,226 +298,35 @@
             <p>Best Players of the ICC Series</p>
           </div>
         </div>
+		
     		<div class="row">
+		
     			<div class="col-md-12 ftco-animate">
     				<div class="carousel-team owl-carousel">
+					<!--this is a loop    -->
+					{% for te in team  %}
     				<div class="item">
+					
     					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff1.png);"></div>
+							
+		    				<div class="img" style="background-image: url({{te.player_image.url}});"></div>
 		    				<div class="text">
-		    					<h3 class="mb-0">Babar Azam</h3>
-		    					<span class="position">Batsman</span>
+		    					<h3 class="mb-0">{{te.player_name}}</h3>
+		    					<span class="position">{{te.player_desc}}</span>
 		    				</div>
+						
 	    				</div>
+						
     				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff2.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Virat Kohli</h3>
-		    					<span class="position">Batsman</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff3.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">AB de Villiers</h3>
-		    					<span class="position">Batsman & Fielder</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff5.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Jos Buttler</h3>
-		    					<span class="position">Wicket Keeper</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff6.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Muhammad Amir</h3>
-		    					<span class="position">Fast Bowler</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff4.png);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Chris Gill</h3>
-		    					<span class="position">Righthand Batsman</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff7.png);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Sarfaraz Ahmed</h3>
-		    					<span class="position">Best Captains</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff7.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Shakib Al Hasan</h3>
-		    					<span class="position">All Rounder</span>
-		    				</div>
-	    				</div>
-    				</div>
-    				<div class="item">
-    					<div class="team-wrap text-center">
-		    				<div class="img" style="background-image: url(static/images/staff8.jpg);"></div>
-		    				<div class="text">
-		    					<h3 class="mb-0">Imad Wasim</h3>
-		    					<span class="position">All Rounder</span>
-		    				</div>
-	    				</div>
-    				</div>
+						 {% endfor %}
     			</div>
+				
     		</div>
+			
     	</div>
     </section>
 
 
-		<section class="ftco-section services-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-{#          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">#}
-{#            <div class="media block-6 services d-flex">#}
-{#              <div class="icon"><span class="flaticon-baseball-ball"></span></div>#}
-{#              <div class="media-body">#}
-{#                <h3 class="heading mb-3">Baseball Training</h3>#}
-{#                <p>A small river named Duden flows by their place and supplies.</p>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">#}
-{#            <div class="media block-6 services d-flex">#}
-{#              <div class="icon"><span class="flaticon-helmet"></span></div>#}
-{#              <div class="media-body">#}
-{#                <h3 class="heading mb-3">Softball Training</h3>#}
-{#                <p>A small river named Duden flows by their place and supplies.</p>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">#}
-{#            <div class="media block-6 services d-flex">#}
-{#              <div class="icon"><span class="flaticon-helmet-1"></span></div>#}
-{#              <div class="media-body">#}
-{#                <h3 class="heading mb-3">Basic Defense</h3>#}
-{#                <p>A small river named Duden flows by their place and supplies.</p>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">#}
-{#            <div class="media block-6 services d-flex">#}
-{#              <div class="icon"><span class="flaticon-baseball-bat"></span></div>#}
-{#              <div class="media-body">#}
-{#                <h3 class="heading mb-3">Basic Tactics</h3>#}
-{#                <p>A small river named Duden flows by their place and supplies.</p>#}
-{#              </div>#}
-{#            </div>#}
-          </div>
-        </div>
-      </div>
-    </section>
-
-{#    <section class="ftco-section testimony-section slash">#}
-{#    	<div class="overlay"></div>#}
-{#      <div class="container">#}
-{#        <div class="row justify-content-center mb-5 pb-3">#}
-{#          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">#}
-{#          	<span class="subheading">Testimonial</span>#}
-{#            <h2 class="mb-4">Happy Viewers</h2>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="row ftco-animate justify-content-center">#}
-{#          <div class="col-md-12">#}
-{#            <div class="carousel-testimony owl-carousel ftco-owl">#}
-{#              <div class="item">#}
-{#                <div class="testimony-wrap text-center">#}
-{#                  <div class="user-img mb-4" style="background-image: url(static/images/person_1.jpg)">#}
-{#                    <span class="quote d-flex align-items-center justify-content-center">#}
-{#                      <i class="icon-quote-left"></i>#}
-{#                    </span>#}
-{#                  </div>#}
-{#                  <div class="text p-3">#}
-{#                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
-{#                    <p class="name">Jason Smith</p>#}
-{#                    <span class="position">Viewer</span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="item">#}
-{#                <div class="testimony-wrap text-center">#}
-{#                  <div class="user-img mb-4" style="background-image: url(static/images/person_2.jpg)">#}
-{#                    <span class="quote d-flex align-items-center justify-content-center">#}
-{#                      <i class="icon-quote-left"></i>#}
-{#                    </span>#}
-{#                  </div>#}
-{#                  <div class="text p-3">#}
-{#                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
-{#                    <p class="name">Jason Smith</p>#}
-{#                    <span class="position">Viewer</span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="item">#}
-{#                <div class="testimony-wrap text-center">#}
-{#                  <div class="user-img mb-4" style="background-image: url(static/images/person_3.jpg)">#}
-{#                    <span class="quote d-flex align-items-center justify-content-center">#}
-{#                      <i class="icon-quote-left"></i>#}
-{#                    </span>#}
-{#                  </div>#}
-{#                  <div class="text p-3">#}
-{#                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
-{#                    <p class="name">Jason Smith</p>#}
-{#                    <span class="position">Viewer</span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="item">#}
-{#                <div class="testimony-wrap text-center">#}
-{#                  <div class="user-img mb-4" style="background-image: url(static/images/person_4.jpg)">#}
-{#                    <span class="quote d-flex align-items-center justify-content-center">#}
-{#                      <i class="icon-quote-left"></i>#}
-{#                    </span>#}
-{#                  </div>#}
-{#                  <div class="text p-3">#}
-{#                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
-{#                    <p class="name">Jason Smith</p>#}
-{#                    <span class="position">Viewer</span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="item">#}
-{#                <div class="testimony-wrap text-center">#}
-{#                  <div class="user-img mb-4" style="background-image: url(static/images/person_3.jpg)">#}
-{#                    <span class="quote d-flex align-items-center justify-content-center">#}
-{#                      <i class="icon-quote-left"></i>#}
-{#                    </span>#}
-{#                  </div>#}
-{#                  <div class="text p-3">#}
-{#                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>#}
-{#                    <p class="name">Jason Smith</p>#}
-{#                    <span class="position">Viewer</span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </section>#}
 
     <section class="ftco-section">
       <div class="container">
@@ -635,120 +337,33 @@
           </div>
         </div>
         <div class="row d-flex">
+        {% for news in home_news  %}
+        <!--this is a loop  static/images/image1.webp /  -->
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="News1.html" class="block-20" style="background-image: url('static/images/image1.webp');">
+              <a href="News1.html" class="block-20" style="background-image: url({{news.img.url}});">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
               		<div class="one">
-              			<span class="day mr-1">2</span>
+              			<span class="day mr-1">{{news.day}}</span>
               		</div>
               		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Dec</span>
+              			<span class="yr">{{news.year}}</span>
+              			<span class="mos">{{news.month}}</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">Australia in command despite late collapse on day three</a></h3>
+                <h3 class="heading"><a href="#">{{news.desc}}</a></h3>
               </div>
             </div>
+
           </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="News1.html" class="block-20" style="background-image: url('static/images/image2.webp');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">25</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">India vs West Indies ODI series - what's at stake really?</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="News1.html" class="block-20" style="background-image: url('static/images/image3.webp');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">20</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Overlooked by England, Billings takes a break from franchise cricket</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="News1.html" class="block-20" style="background-image: url('static/images/image4.webp');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">12</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Mark Boucher set to be named South Africa's team director</a></h3>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
 
-{#    <section class="ftco-section ftco-counter bg-light" id="section-counter">#}
-{#    	<div class="container">#}
-{#    		<div class="row">#}
-{#          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">#}
-{#            <div class="block-18 text-center">#}
-{#              <div class="text">#}
-{#                <strong class="number" data-number="20">0</strong>#}
-{#                <span>Game Played</span>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">#}
-{#            <div class="block-18 text-center">#}
-{#              <div class="text">#}
-{#                <strong class="number" data-number="3">0</strong>#}
-{#                <span>Coaches</span>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">#}
-{#            <div class="block-18 text-center">#}
-{#              <div class="text">#}
-{#                <strong class="number" data-number="24">0</strong>#}
-{#                <span>Trophies</span>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">#}
-{#            <div class="block-18 text-center">#}
-{#              <div class="text">#}
-{#                <strong class="number" data-number="18">0</strong>#}
-{#                <span>Members</span>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#    	</div>#}
-{#    </section>#}
+   
 
 		<section class="ftco-subscribe img" style="background-image: url(static/images/bg2.jpg);">
       <div class="overlay">

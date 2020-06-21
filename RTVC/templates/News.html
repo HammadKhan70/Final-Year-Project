@@ -62,173 +62,41 @@
           </div>
         </div>
       </div>
+
     </section>
 
+           
      <section class="ftco-section">
+     
       <div class="container">
+      
         <div class="row d-flex">
+        {% for ne in new  %}
+        <!--this is a loop  static/images/image1.webp /  -->
           <div class="col-md-6 col-lg-3 ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="News1.html" class="block-20" style="background-image: url(static/images/image1.webp);">
+              <a href="News1.html" class="block-20" style="background-image: url({{ne.img.url}});">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
               		<div class="one">
-              			<span class="day mr-1">2</span>
+              			<span class="day mr-1">{{ne.day}}</span>
               		</div>
               		<div class="two">
-              			<span class="yr">{{ne1.desc}}</span>
-              			<span class="mos">Dec</span>
+              			<span class="yr">{{ne.year}}</span>
+              			<span class="mos">{{ne.month}}</span>
               		</div>
               	</div>
-                <h3 class="heading"><a href="#">{{ne1.name}}</a></h3>
+                <h3 class="heading"><a href="#">{{ne.desc}}</a></h3>
               </div>
             </div>
+
           </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image2.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">25</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">{{ne2.desc}}</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">{{ne2.name}}</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image3.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">20</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Overlooked by England, Billings takes a break from franchise cricket</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image4.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">12</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Mark Boucher set to be named South Africa's team director</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image5.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">4</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Nov</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Smith, Boucher spearhead South Africa's bid to repair the damage</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image6.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">29</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Oct</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Boucher named South Africa head coach until 2023 World Cup</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image7.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">20</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Oct</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Bhuvneshwar Kumar under another injury cloud</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url(static/images/image8.webp);">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center p-2 pr-3 mb-4 topp">
-              		<div class="one">
-              			<span class="day mr-1">12</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">Oct</span>
-              		</div>
-              	</div>
-                <h3 class="heading"><a href="#">Dwayne Bravo comes out of T20I retirement</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          {% endfor %}
       </div>
+       
     </section>
+    
 
 		<section class="ftco-subscribe img" style="background-image: url(static/images/bg2.jpg);">
       <div class="overlay">

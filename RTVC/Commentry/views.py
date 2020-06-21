@@ -1,12 +1,25 @@
 from django.shortcuts import render, HttpResponse
 from .models import news
-
+from .models import top_scores
+from .models import recent_matches
+from .models import league_table
+from .models import game_schedule
+from .models import display_ad
+from .models import upcoming_matches
+from .models import team_squad
+from .models import homepage_news
+from .models import score
 # Create your views here.
 
 
 def index(request):
+    home_news = homepage_news.objects.all()
+    team = team_squad.objects.all()
+    upcome = upcoming_matches.objects.all()
+    ad = display_ad.objects.all()
+    schedule = game_schedule.objects.all()
 
-    return render(request, 'index.html', {'score': 300})
+    return render(request, 'index.html', {'home_news': home_news, 'team': team, 'upcome': upcome, 'ad': ad, 'schedule': schedule})
    # return HttpResponse("this is Hammad Khan Baloch")
 
 
@@ -21,18 +34,8 @@ def contact(request):
 
 
 def News(request):
-
-    ne1 = news()
-    ne1.name = 'Australia in command despite late collapse on day three'
-    ne1.desc = '2020'
-
-    ne2 = news()
-    ne2.name = 'India vs West Indies ODI series - whats at stake really?'
-    ne2.desc = '2021'
-
-    ne = [ne1, ne2]
-
-    return render(request, 'News.html', {'ne': ne})
+    new = news.objects.all()
+    return render(request, 'News.html', {'new': new})
 
 
 def News1(request):
@@ -40,7 +43,12 @@ def News1(request):
 
 
 def TeamRanking(request):
-    return render(request, 'TeamRanking.html')
+
+    recent = recent_matches.objects.all()
+    top = top_scores.objects.all()
+    table = league_table.objects.all()
+
+    return render(request, 'TeamRanking.html', {'top': top, 'table': table, 'recent': recent})
 
 
 def login(request):

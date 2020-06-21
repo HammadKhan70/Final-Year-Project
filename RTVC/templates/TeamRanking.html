@@ -73,26 +73,31 @@
 	          	<span class="subheading">Game Report</span>
 	            <h2 class="mb-4">Recent Matches 2019</h2>
 	          </div>
+                
 	          <div class="row">
+               
+			            <!--this is a loop    -->
+			    
 	          	<div class="col-md-12">
+				  {% for re in recent  %}
 	          		<div class="scoreboard scoreboard-2 slash">
-			          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019; ICC League</span></div>
+			          	<div class="divider ftco-animate text-center mb-4"><span>{{re.date_time}}</span></div>
 			          	<div class="sport-team-wrap ftco-animate">
 			          		<span class="vs">vs</span>
 				          	<div class="d-sm-flex mb-4">
 					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo" style="background-image: url(static/images/Team1.png);"></div>
+				          			<div class="img logo" style="background-image: url({{re.img1.url}});"></div>
 												<div class="text-center px-1 px-md-3 desc">
-{#                                                     <h5>Win</h5>#}
-													<h3 class="score win"><span>310/6 <h5>(30)</h5></span></h3>
-													<h4 class="team-name">Pakistan</h4>
+                                                         {#    <h5>Win</h5>#}
+													<h3 class="score win"><span>{{re.team1_score}} <h5>({{re.team1_over}})</h5></span></h3>
+													<h4 class="team-name">{{re.team1}}</h4>
 												</div>
 					          	</div>
 					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo order-sm-last" style="background-image: url(static/images/Team2.png);"></div>
+				          			<div class="img logo order-sm-last" style="background-image: url({{re.img2.url}});"></div>
 												<div class="text-center px-1 px-md-3 desc">
-													<h3 class="score lost"><span>258/9 <h5>(38)</h5></span></h3>
-													<h4 class="team-name">Australia</h4>
+													<h3 class="score lost"><span>{{re.team2_score}} <h5>({{re.team2_over}})</h5></span></h3>
+													<h4 class="team-name">{{re.team2}}</h4>
 												</div>
 					          	</div>
 				          	</div>
@@ -100,108 +105,13 @@
 			          	<div class="text-center ftco-animate">
 				          	<p class="mb-0"><a href="#" class="btn btn-black">More Details</a></p>
 				          </div>
+						
 			          </div>
+					     {% endfor %}
 	          	</div>
-	          	<div class="col-md-12">
-	          		<div class="scoreboard scoreboard-2 slash">
-			          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019; ICC League</span></div>
-			          	<div class="sport-team-wrap ftco-animate">
-			          		<span class="vs">vs</span>
-				          	<div class="d-sm-flex mb-4">
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo" style="background-image: url(static/images/Team3.png);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-{#                                                     <h5>Win</h5>#}
-													<h3 class="score win"><span>289/9 <h5>(30.5)</h5></span></h3>
-													<h4 class="team-name">New Zealand</h4>
-												</div>
-					          	</div>
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo order-sm-last" style="background-image: url(static/images/Team4.png);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-													<h3 class="score lost"><span>273/5<h5>(33)</h5></span></h3>
-													<h4 class="team-name">England</h4>
-												</div>
-					          	</div>
-				          	</div>
-			          	</div>
-			          	<div class="text-center ftco-animate">
-				          	<p class="mb-0"><a href="#" class="btn btn-black">More Details</a></p>
-				          </div>
-			          </div>
-	          	</div>
-	          	<div class="col-md-12">
-	          		<div class="scoreboard scoreboard-2 slash">
-			          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019; ICC League</span></div>
-			          	<div class="sport-team-wrap ftco-animate">
-			          		<span class="vs">vs</span>
-				          	<div class="d-sm-flex mb-4">
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo" style="background-image: url(static/images/Team5.jpg);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-{#                                                    <h5>Win</h5>#}
-													<h3 class="score win"><span>223/8  <h5>(45)</h5></span></h3>
-													<h4 class="team-name">West Indies</h4>
-												</div>
-					          	</div>
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo order-sm-last" style="background-image: url(static/images/Team6.png);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-													<h3 class="score lost"><span>191/4 <h5>(50)</h5></span></h3>
-													<h4 class="team-name">Sri Lanka</h4>
-												</div>
-					          	</div>
-				          	</div>
-			          	</div>
-			          	<div class="text-center ftco-animate">
-				          	<p class="mb-0"><a href="#" class="btn btn-black">More Details</a></p>
-				          </div>
-			          </div>
-	          	</div>
-	          	<div class="col-md-12">
-	          		<div class="scoreboard scoreboard-2 slash">
-			          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019;ICC League</span></div>
-			          	<div class="sport-team-wrap ftco-animate">
-			          		<span class="vs">vs</span>
-				          	<div class="d-sm-flex mb-4">
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo" style="background-image: url(static/images/Team7.png);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-													<h3 class="score win"><span>312/8 <h5>(43)</h5></span></h3>
-													<h4 class="team-name">India</h4>
-												</div>
-					          	</div>
-					          	<div class="sport-team d-flex align-items-center">
-				          			<div class="img logo order-sm-last" style="background-image: url(static/images/Team8.png);"></div>
-												<div class="text-center px-1 px-md-3 desc">
-													<h3 class="score lost"><span>290/7 <h5>(37.3)</h5></span></h3>
-													<h4 class="team-name">South Africa</h4>
-												</div>
-					          	</div>
-				          	</div>
-			          	</div>
-			          	<div class="text-center ftco-animate">
-				          	<p class="mb-0"><a href="#" class="btn btn-black">More Details</a></p>
-				          </div>
-			          </div>
-	          	</div>
+	          	   
 	          </div>
-	          <div class="row mt-5">
-		          <div class="col text-center">
-		            <div class="block-27">
-		              <ul>
-		                <li><a href="#">&lt;</a></li>
-		                <li class="active"><span>1</span></li>
-		                <li><a href="#">2</a></li>
-		                <li><a href="#">3</a></li>
-		                <li><a href="#">4</a></li>
-		                <li><a href="#">5</a></li>
-		                <li><a href="#">&gt;</a></li>
-		              </ul>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
+	      
 					<div class="col-md-4 sidebar">
 						<div class="sidebar-box">
 	            <h2 class="mb-4">Latest Video</h2>
@@ -214,6 +124,8 @@
 	    					</p>
 							</div>
 						</div>
+						<!--League Table  -->
+
 						<div class="sidebar-box">
 	            <h2 class="mb-4">League Table</h2>
 	            <table class="table table-league">
@@ -228,104 +140,36 @@
 						      </tr>
 						    </thead>
 						    <tbody>
+							{% for le in table %}
 						      <tr>
-						        <td>Pakistan</td>
-						        <td>9</td>
-						        <td>7</td>
-                                  <td>1</td>
-                                   <td>15</td>
-                                   <td>+0.809</td>
+						        <td>{{le.team_name}}</td>
+						        <td>{{le.matches}}</td>
+						        <td>{{le.win}}</td>
+                                  <td>{{le.lost}}</td>
+                                   <td>{{le.points}}</td>
+                                   <td>{{le.net_run_rate}}</td>
 						      </tr>
-						      <tr>
-						        <td>Australia</td>
-						        <td>9</td>
-						        <td>7</td>
-                                  <td>2</td>
-                                   <td>14</td>
-                                   <td>+0.868</td>
-						      </tr>
-						      <tr>
-						        <td>India</td>
-						        <td>9</td>
-						        <td>6</td>
-                                  <td>3</td>
-                                   <td>12</td>
-                                   <td>+1.152</td>
-						      </tr>
-						      <tr>
-						        <td>South Africa</td>
-						        <td>9</td>
-						        <td>5</td>
-                                  <td>3</td>
-                                   <td>11</td>
-                                   <td>+0.175</td>
-						      </tr>
-						      <tr>
-						        <td>West Indies</td>
-						        <td>9</td>
-						        <td>5</td>
-                                  <td>3</td>
-                                   <td>8</td>
-                                   <td>-0.430</td>
-						      </tr>
-						      <tr>
-						        <td>Sri Lanka</td>
-						        <td>9</td>
-						        <td>3</td>
-                                  <td>4</td>
-                                   <td>7</td>
-                                   <td>-0.919</td>
-						      </tr>
-						      <tr>
-						        <td>New Zealand</td>
-						        <td>9</td>
-						        <td>3</td>
-                                  <td>5</td>
-                                   <td>7</td>
-                                   <td>-0.030</td>
-						      </tr>
-                             <tr>
-						        <td>England</td>
-						        <td>9</td>
-						        <td>2</td>
-                                 <td>6</td>
-                                  <td>6</td>
-                                  <td>-0.410</td>
-						      </tr>
+						     {% endfor %}
 						    </tbody>
 						  </table>
 						</div>
+
+						<!--top scores -->
 						<div class="sidebar-box">
 	            <h2 class="mb-4">Top Scores</h2>
 	            <div class="row">
+
+				<!--this is a loop -->
+				 {% for tp in top %}
 	            	<div class="col-md-6 top-score pb-4 mb-1">
-			    				<div class="img" style="background-image: url(static/images/staff1.png);"></div>
+			    				<div class="img" style="background-image: url({{tp.img.url}});"></div>
 			    				<div class="text text-center">
-			    					<h3 class="mb-0">Babar Azam</h3>
-			    					<span class="score">5 games / 335 Score</span>
+			    					<h3 class="mb-0">{{tp.player_name}}</h3>
+			    					<span class="score">{{tp.games}} games / {{tp.score}} Score</span>
 			    				</div>
 		    				</div>
-		    				<div class="col-md-6 top-score pb-4 mb-1">
-			    				<div class="img" style="background-image: url(static/images/staff2.jpg);"></div>
-			    				<div class="text text-center">
-			    					<h3 class="mb-0">Virat Kohli</h3>
-			    					<span class="score">4 games / 253 score</span>
-			    				</div>
-		    				</div>
-		    				<div class="col-md-6 top-score pb-4 mb-1">
-			    				<div class="img" style="background-image: url(static/images/staff3.jpg);"></div>
-			    				<div class="text text-center">
-			    					<h3 class="mb-0">ab de villiers</h3>
-			    					<span class="score">5 games / 250 score</span>
-			    				</div>
-		    				</div>
-		    				<div class="col-md-6 top-score pb-4 mb-1">
-			    				<div class="img" style="background-image: url(static/images/staff4.png);"></div>
-			    				<div class="text text-center">
-			    					<h3 class="mb-0">Chris Gill</h3>
-			    					<span class="score">5 games / 230 score</span>
-			    				</div>
-		    				</div>
+		    		{% endfor %}	
+
 	            </div>
 						</div>
 					</div>
