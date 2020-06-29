@@ -29,14 +29,16 @@
 
     <div class="main">
 
-
+    <a href="{% url 'index' %}" class="signup-image-link">HOME</a>
         <!-- Sing in  Form -->
         <section class="sign-in"   >
             <div class="container">
                 <div class="signin-content">
+                
                     <div class="signin-image">
+                     
                         <figure><img src="static/images/signin.jpg" alt="sing up image"></figure>
-                        <a href="signup.html" class="signup-image-link">Create an account</a>
+                        <a href="{% url 'signup' %}" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
@@ -69,11 +71,13 @@
                         </div> {% endcomment %}
                     </div>
                 </div>
+               
                 <div class="signin-form" >
                         {% for message in messages %}
                             <h3>{{message}}</h3>
                             {% endfor %}
                     </div>
+                    
             </div>
         </section>
 
