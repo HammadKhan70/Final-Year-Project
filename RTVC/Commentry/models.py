@@ -93,3 +93,8 @@ class score(models.Model):
     image_team2 = models.ImageField(upload_to='images')
     name_team1 = models.CharField(max_length=100)
     name_team2 = models.CharField(max_length=100)
+
+
+class music(models.Model):
+
+    files = models.FileField(upload_to='musics')

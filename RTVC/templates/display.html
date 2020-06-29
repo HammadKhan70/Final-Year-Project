@@ -44,9 +44,13 @@
 	          <li class="nav-item"><a href="News" class="nav-link">News</a></li>
                 <li class="nav-item active"><a href="about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+            {% if user.is_authenticated %}
+			  <li class="nav-item "><a href="" class="nav-link">{{user.first_name}}</li>
+			  <li class="nav-item"><a href="logout" class="nav-link">logout</a></li>
+			  {% else %}
             <li class="nav-item"><a href="login" class="nav-link">login</a></li>
               <li class="nav-item cta"><a href="signup" class="nav-link">Sign UP</a></li>
-
+           {% endif %}
 	        </ul>
 	      </div>
 	    </div>
@@ -65,6 +69,56 @@
       </div>
     </section>
 
+
+{% comment %} <section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-10">
+	          <div class="heading-section text-center ftco-animate">
+	          	<span class="subheading">Game Report</span>
+	            <h2 class="mb-4">Score Board</h2>
+	          </div>
+	          <div class="scoreboard slash">
+	          	<div class="divider ftco-animate text-center mb-4"><span>Mon. June 3, 2019; T-20 Series</span></div>
+	          	<div class="sport-team-wrap ftco-animate">
+	          		<span class="vs">vs</span>
+		          	<div class="d-sm-flex mb-4">
+			          	<div class="sport-team d-flex align-items-center">
+		          			<div class="img logo" style="background-image: url(static/images/Team1.png);"></div>
+										<div class="text-center px-1 px-md-3 desc">
+                                            <h3 class="score win"><span>378/6 <h4>(30.5)</h4></span></h3>
+											<h4 class="team-name">Pakistan</h4>
+										</div>
+			          	</div>
+			          	<div class="sport-team d-flex align-items-center">
+		          			<div class="img logo order-sm-last" style="background-image: url(static/images/Team2.png);"></div>
+										<div class="text-center px-1 px-md-3 desc">
+											<h3 class="score lost"><span>   351/9 <h4>(50)</h4></span></h3>
+											<h4 class="team-name">Australia</h4>
+										</div>
+			          	</div>
+		          	</div>
+	          	</div>
+	          	
+	          </div>
+					</>
+				</div>
+			</div>
+		</section> {% endcomment %}
+  <!-- This is a Live score APi-->
+
+<section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+
+ <iframe frameborder='0' src='https://www.totalcricketscorer.com/TCSLive/TCSLatestScoresWidget.aspx?ctry=&rgn=&clb=&max=10&rdm=true&refresh=auto' width="1200px" height="300px"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
       <section class="ftco-section">
       <div class="container">
       {% comment %} <div class="row d-flex"> {% endcomment %}
@@ -72,6 +126,8 @@
         <div class="col-md-12 order-md-last d-flex ">
            <div class="col-lg-2"></div>
       <div class="form-group" >
+                <h3 align='center'>Live Commentry</h3>
+                <br><br>
                 <textarea name="" id="" cols="120" rows="15" class="form-control" placeholder="Commentry"></textarea>
               </div>
               <div class="col-lg-2"></div>
@@ -86,7 +142,7 @@
   <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
     alt="Avatar">
   <div class="media-body">
-    <h5 class="mt-0 font-weight-bold blue-text">Anna Smith</h5>
+    <h5 class="mt-0 font-weight-bold blue-text">Ayesha</h5>
     what a good shoot .Pakistan team is palying so well and RTVC is prvding an amazing Services and i am very happy that found that
     RTVC
 
@@ -94,7 +150,7 @@
       <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg"
         alt="Generic placeholder image">
       <div class="media-body">
-        <h5 class="mt-0 font-weight-bold blue-text">Danny Tatuum</h5>
+        <h5 class="mt-0 font-weight-bold blue-text">Hammad</h5>
         <div class="form-group basic-textarea rounded-corners">
           <textarea class="form-control z-depth-1" id="exampleFormControlTextarea345" rows="3" placeholder="Write your comment..."></textarea>
         </div>

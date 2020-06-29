@@ -9,6 +9,7 @@ from .models import upcoming_matches
 from .models import team_squad
 from .models import homepage_news
 from .models import score
+from .models import music
 
 # Register your models here.
 
@@ -22,3 +23,4 @@ admin.site.register(upcoming_matches)
 admin.site.register(team_squad)
 admin.site.register(homepage_news)
 admin.site.register(score)
+admin.site.register(music)

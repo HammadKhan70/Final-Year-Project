@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transcribe</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+  </head>
+  <body>
+
+    <div class="row mt-3">
+       <div class="col-lg-2"></div>
+       <div class="col-lg-8 text-center">
+           <h1>Transcribe Audio</h1>
+       </div>
+   </div>
+    <div class="row mt-3">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+          <h3>Upload Audio:</h3>
+          <form method="post" >
+              {% csrf_token %} 
+            <input type="hidden" name="Transcribe">
+              <input name="uploaded_file" type="file" placeholder="Upload audio file" required>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <h1>Commetry</h1>
+             <h1 style="color:red;"> {{data}}</h1>
+          </form>
+          
+      </div>
+  </div>
+         
+     
+  </body>
+</html>
